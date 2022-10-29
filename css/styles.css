@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --Darkcyan: hsl(158, 36%, 37%);
+    --HoverBtn: hsl(156, 42%, 18%);
+    --Cream: hsl(30, 38%, 92%);
+    --VeryDarkBlue: hsl(212, 21%, 14%);
+    --DarkGrayishBlue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Cream);
+    font-family: 'Monserrat', sans-serif;
+}
+
+h1 {
+    color: var(--VeryDarkBlue);
+    font-family: 'Fraunces', sans-serif;
+}
+
+p {
+    font-size: 14px;
+    color: var(--DarkGrayishBlue);
+}
+
+.content {
+    display: grid;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+    background-color: var(--White);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-image img {
+    max-width: 100%;
+    display: inherit;
+}
+
+.product-details {
+    padding: 30px;
+}
+
+.product-category {
+    letter-spacing: 0.5em;
+    margin-bottom: 20px;
+}
+
+.product-name {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.prices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.current-price {
+    display: inline;
+    color: var(--Darkcyan);
+    font-family: 'Fraunces', sans-serif;
+    font-size: 2em;
+}
+
+.old-price {
+    text-decoration: line-through;
+    font-size: 1em;
+}
+
+.btn-cart {
+    all: unset;
+    background-color: var(--Darkcyan);
+    color: var(--White);
+    width: 90%;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.btn-cart:hover {
+    cursor: pointer;
+    background-color: var(--HoverBtn);
+}
+
+.attribution {
+    text-align: center;
+}
+
+.attribution p {
+    color: black;
+    font-weight: 700;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+@media (max-width: 700px) {
+    .product {
+        display: block;
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .product-category {
+        font-size: 0.75em;
+    }
+
+    .product-name {
+        font-size: 2rem;
+    }
+
+    .product-description {
+        font-size: 1rem;
+    }
+
+    .prices {
+        max-width: 300px;
+    }
+
+    .attribution {
+        display: block;
+        margin: 10px;
+    }
+}
